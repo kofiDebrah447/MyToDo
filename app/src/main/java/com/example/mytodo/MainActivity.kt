@@ -27,9 +27,12 @@ class MainActivity : AppCompatActivity() {
                 listOfTasks.removeAt(position)
                 // 2. Notify the adapter that our data set has changed
                 adapter.notifyDataSetChanged()
+
+                saveItems()
             }
 
         }
+        loadItems()
 
         findViewById<Button>(R.id.button2).setOnClickListener{
             Log.i("Kofi", "User clicked on button")
